@@ -1,0 +1,8 @@
+# macos .dstore
+**/.DS_Store
+
+# node_modules
+**/node_modules/*
+
+# php composer vendor
+**/vendor/*

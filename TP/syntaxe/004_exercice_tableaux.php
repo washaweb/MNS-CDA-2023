@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Exercice Tableaux</title>
+  <titl e>Exercice Tableaux</titl>
 </head>
 
 <body>
@@ -42,7 +42,18 @@ $vehicule = [
 - couleur de finition extérieure
 - puissance et année du véhicule
 */
-
+echo '<br>';
+echo $vehicule['conducteur']['nom'], ' ', $vehicule['conducteur']['prenom'], '<br>';
+print_r($vehicule['conducteur']['permis']);
+echo '<br>';
+echo $vehicule['finitions']['interieur']['type'];
+echo '<br>';
+echo $vehicule['finitions']['exterieur']['couleur'];
+echo '<br>';
+echo 'La puissance du véhicule est de ' . $vehicule['caracteristiques']['puissance'] . ' chevaux.';
+echo '<br>';
+$y = $vehicule['caracteristiques']['annee'];
+echo "L\'Année du véhicule est $y";
 
 ?>
 

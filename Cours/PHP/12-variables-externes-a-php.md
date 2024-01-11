@@ -25,7 +25,7 @@ echo $_REQUEST['username'];
 
 Utiliser un formulaire de type `GET` est similaire, hormis le fait que vous deviez utiliser les variables prédéfinies de `GET` à la place. `GET` s'applique aussi à la `QUERY_STRING` (les informations disponibles après le `?` dans une URL). De ce fait, par exemple, `http://www.example.com/test.php?id=3` contient les données de `GET`, qui sont accessibles via $_GET['id']. Voir aussi [$_REQUEST](https://www.php.net/manual/fr/reserved.variables.request.php).
 
->Note: Les points et les espaces dans les noms de variables sont convertis en underscores. 
+>Note: Les points et les espaces dans les noms de variables sont convertis en underscores.
 
 Par exemple, `<input name="a.b" />` deviendra `$_REQUEST["a_b"]`.
 
@@ -36,7 +36,7 @@ PHP comprend aussi les tableaux dans le contexte des formulaires. (voir aussi la
 ```php
 if ($_POST) {
     echo '<pre>';
-    echo htmlspecialchars(print_r($_POST, true));
+    echo htmlspecialchars(print_r($_POST, true)); //la méthode htmlspecialchars sert à échaper les caractères html dans la variable pour éviter qu'ils ne soient interprétés comme du code au moment de l'affichage
     echo '</pre>';
 }
 ```

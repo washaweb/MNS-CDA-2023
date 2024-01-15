@@ -74,6 +74,8 @@ if($_POST && $_POST['nom'] && $_POST['prenom']) {
   $nom = $_POST['nom'];
   $prenom = $_POST['prenom'];
   echo $nom . ' ' . $prenom;
+  echo '<br>';
+  echo strlen($prenom);
 }
 
 /*	

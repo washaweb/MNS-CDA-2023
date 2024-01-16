@@ -6,3 +6,7 @@
 
 # php composer vendor
 **/vendor/*
+
+# Ignore .env
+.env
+**/config.php

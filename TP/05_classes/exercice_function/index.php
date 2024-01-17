@@ -1,5 +1,9 @@
 <?php
 	/*
+    //exercice dispo ici :
+    https://sharemycode.fr/ak7
+
+
 		1. Dans le fichier functions.php :
 		Créez une fonction `the_content()` qui affiche le contenu d'un
 		article, stocké dans la variable $currentArticle (voir le code

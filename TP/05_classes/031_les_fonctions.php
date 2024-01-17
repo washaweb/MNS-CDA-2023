@@ -84,3 +84,18 @@ function exempleRecursif($n) {
 }
 
 exempleRecursif(0);
+
+
+// On peut utiliser ... pour accéder aux arguments d'une fonction (nombre variable d'arguments)
+/** 
+ * fonction qui retourne la somme de tous les arguments passés
+ * @param INT,FLOAT $numbers les nombres à sommer
+*/
+function sum(...$numbers) {
+  $nb = 0;
+  foreach ($numbers as $number) {
+    $nb += $number;
+  }
+  return $nb;
+}
+echo sum(1,2,3,4);

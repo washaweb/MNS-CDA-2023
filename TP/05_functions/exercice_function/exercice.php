@@ -15,8 +15,8 @@
 		modèle, et appelez-la dans la page.
 		Utilisez cette fonction pour changer le titre de la page web.
 
-		3. Les fonctions `the_title()` et `the_content()` sont bien connues.
-		Ou les trouve-t-on ? (GIYF)
+		3. Les fonctions `the_title()` et `the_content()` sont bien connues pour ceux qui font du dev Wordpress.
+		
 	 */
 
 	require_once 'functions.php';
@@ -36,6 +36,7 @@
   
   // l'article courant
 	$currentArticle = $articles[1];
+	// $GLOBALS['currentArticle'] = $articles[1];
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -43,11 +44,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title><?php the_title() ?></title>
+  <title><?php the_title(); //affiche le titre ?></title>
 </head>
 
 <body>
-  <?php the_content() ?>
+  <!-- affiche le titre entouré d'un titre h1  -->
+  <h1><?php the_title();?></h1>
+  <?php the_content(); //affiche le contenu entouré d'une paragraphe ?>
 </body>
 
 </html>

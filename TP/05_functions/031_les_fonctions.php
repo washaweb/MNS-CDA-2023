@@ -99,3 +99,7 @@ function sum(...$numbers) {
   return $nb;
 }
 echo sum(1,2,3,4);
+
+
+// Voir la portée des variables ici
+// https://www.php.net/manual/fr/language.variables.scope.php

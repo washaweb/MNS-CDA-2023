@@ -123,4 +123,3 @@ En suivant ces pratiques, vous pouvez assurer que votre interaction avec la base
 - Documentation PDO : https://www.php.net/manual/fr/ref.pdo-mysql.php
 - Pas à pas PDO dans la doc PHP: https://www.php.net/manual/fr/intro.pdo.php
 - Pour aller plus loin: https://openclassrooms.com/fr/courses/918836-concevez-votre-site-web-avec-php-et-mysql/914293-accedez-aux-donnees-en-php-avec-pdo
-

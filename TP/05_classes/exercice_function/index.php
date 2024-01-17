@@ -1,8 +1,5 @@
 <?php
 	/*
-    //exercice dispo ici :
-    https://sharemycode.fr/ak7
-
 
 		1. Dans le fichier functions.php :
 		Créez une fonction `the_content()` qui affiche le contenu d'un

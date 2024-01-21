@@ -11,3 +11,5 @@
 .env
 #Ignore le fichier de configuration de l'application
 **/config.php
+
+Devoirs

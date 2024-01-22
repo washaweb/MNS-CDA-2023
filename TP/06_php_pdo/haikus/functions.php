@@ -37,7 +37,7 @@ function add_haiku($content, $category_id) {
 
   // Filtrer et valider category_id
   $category_id = filter_var($category_id, FILTER_VALIDATE_INT);
-
+  $content = htmlentities($content); //on filtre et on encode les caractères spéciaux pour éviter les problèmes de sécurité
   if (!$category_id) {
     $error = true;
     $errorMessages[] = 'Category ID invalide';
@@ -50,6 +50,7 @@ function add_haiku($content, $category_id) {
   }
 
   // Préparation de la requête
+  // $stmt pour une instance de PDO::Statement
   $stmt = $pdo->prepare("INSERT INTO haikus (category_id, content) VALUES (:category_id, :content)");
 
   // Liaison des paramètres
@@ -83,7 +84,10 @@ function delete_haiku($id) {
     $errorMessages[] = 'l’ID est manquant';
     return false; //on retourne false car il y a eu une erreur
   }
-    // SELECT AVEC DES PARAMETRES DYNAMIQUES
+
+  // stmt -> pour PDO Statement
+
+  // SELECT AVEC DES PARAMETRES DYNAMIQUES
 	$stmt = $pdo->prepare("DELETE FROM haikus WHERE id = :id");
 	// Associer des valeurs aux placeholders
   // ici on précise le type de données des paramètres, en l'occurence un entier (un peu comme on ferait un filter_var() )
@@ -227,6 +231,6 @@ function html_categories($name = 'category_id', $selected = NULL) {
   } else {
     $error = true;
     $errorMessages[] = "Erreur lors de la requête : " . $e->getMessage();
-    return '<select class="form-select" id="'.$selectid.'"><option value="">Aucune catégorie...</option></select>'; //ici on retourne un select vide
+    echo '<select class="form-select" name="'.$name.'" id="'.$name.'"><option value="">Aucune catégorie...</option></select>'; //ici on retourne un select vide
   }
 }

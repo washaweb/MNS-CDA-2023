@@ -27,18 +27,19 @@
 		On peut maintenant exécuter des requêtes sur cet
 		objet :
 	 */
-
-  // DELETE
-	$query = 'DELETE FROM haikus WHERE id=12;';
-	$pdo->exec($query);
+  // SELECT
+	$pdo->exec('SELECT * FROM haikus WHERE id=12;');
   
   // SELECT AVEC DES PARAMETRES DYNAMIQUES
-	$stmt = $pdo->prepare("SELECT * FROM haikus WHERE category_id = ?");
+  //stmt pour une instance de PDO::Statement
+	$stmt = $pdo->prepare("SELECT * FROM haikus WHERE category_id = ? AND id = ?");
 	// Associer des valeurs aux placeholders
 	$stmt->bindParam(1, $category_id);
+	$stmt->bindParam(2, $id);
   $category_id = 1;
+  $id = 10;
 	// Compiler et exécuter la requête
-  $stmt->execute();
+  $stmt->execute(); //ne retourne pas les valeurs de la table, mais seulement le nombre de lignes qui seront récupérées si je fetch les données.
 
 
 	/*
